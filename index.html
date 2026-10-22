@@ -3,13 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Winsbike Atelier</title>
+<title>Winsbike · pièces, outillage et protections vélo · Rostrenen</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Winsbike, distributeur exclusif en France de Weapon Bike, Sumart, Seryt, Crazy Safety et Troxco. Pièces vélo, outillage, protections et atelier à Rostrenen.">
 <meta name="theme-color" content="#0E0F11">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l12 7v14l-12 7-12-7V9z' fill='%23FF5A1F'/%3E%3Cpath d='M16 10l5.2 3v6L16 22l-5.2-3v-6z' fill='%230E0F11'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Winsbike">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Winsbike · pièces, outillage et protections vélo · Rostrenen">
+<meta property="og:description" content="Winsbike, distributeur exclusif en France de Weapon Bike, Sumart, Seryt, Crazy Safety et Troxco. Pièces vélo, outillage, protections et atelier à Rostrenen.">
+<meta property="og:image" content="assets/img/grok/accueil-hero-16x9-1536.webp">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BikeStore", "name": "Winsbike", "legalName": "Ets Corbières", "description": "Spécialiste des accessoires de vélo, distributeur exclusif en France de Weapon Bike, Sumart, Seryt, Crazy Safety et Troxco. Vente d'accessoires et réparation de cycles et de VAE.", "url": "https://www.winsbike.fr/", "telephone": "+33 2 96 29 46 26", "email": "contact@winsbike.fr", "address": {"@type": "PostalAddress", "streetAddress": "8 rue Abbé Gibert", "postalCode": "22110", "addressLocality": "Rostrenen", "addressCountry": "FR"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "14:00", "closes": "18:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "12:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "14:00", "closes": "18:00"}], "sameAs": ["https://www.facebook.com/winsbike", "https://www.instagram.com/winsbike/"]}</script>
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var c=localStorage.getItem('wb:calm'),r=matchMedia('(prefers-reduced-motion: reduce)').matches;if(sessionStorage.getItem('wb:nav'))d.classList.add('nav-in');if(sessionStorage.getItem('wb:intro')||c==='true'||(r&&c!=='false'))d.classList.add('no-intro')}catch(e){d.classList.add('no-intro')}})()</script>
 <link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
@@ -17,8 +26,8 @@
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="hd" id="hd">
   <div class="wrap hd-in">
-    <a class="logo" href="index.html" aria-label="Winsbike, accueil"><img src="assets/img/site/logo-clair-700.webp" alt="Winsbike, spécialiste des accessoires de vélo" width="700" height="263"></a>
-    <nav class="hd-nav" aria-label="Navigation principale"><a href="index.html#pratiques">Pratiques</a><a href="index.html#marques">Marques</a><a href="sumart.html">Sumart</a><a href="cadre-beast-weapon.html">Cadre Beast</a><a href="index.html#atelier">Atelier</a><a href="index.html#pro">Espace pro</a></nav>
+    <a class="logo" href="index.html" aria-label="Winsbike, accueil"><img src="assets/img/site/logo-clair-700.webp" alt="Winsbike, spécialiste des accessoires de vélo" width="700" height="263" fetchpriority="high"></a>
+    <nav class="hd-nav" aria-label="Navigation principale"><button type="button" class="nav-mega" aria-expanded="false" aria-controls="mega">Pratiques <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><a href="index.html#marques">Marques</a><a href="sumart.html">Sumart</a><a href="cadre-beast-weapon.html">Cadre Beast</a><a href="index.html#atelier">Atelier</a><a href="index.html#pro">Espace pro</a></nav>
     <div class="hd-tools">
       <span class="hd-open mono" data-open-chip></span>
       <button type="button" class="tool" id="btn-search" aria-label="Rechercher" data-cursor="Chercher"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></button>
@@ -28,6 +37,8 @@
       <button type="button" class="burger" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
     </div>
   </div>
+  <div class="mega" id="mega" hidden></div>
+  <i class="hd-progress" aria-hidden="true"></i>
 </header>
 <main id="main">
 <div class="loader" id="loader" aria-hidden="true">
@@ -54,6 +65,7 @@
     <h1 class="h1 hero-title" id="hero-t"><span class="ht-line">La pièce</span> <span class="ht-line">juste<span class="ht-dot">.</span></span></h1>
     <div class="hero-dim" aria-hidden="true"><i></i><span class="mono">111 références en ligne</span><i></i></div>
     <p class="lead hero-lead">Pièces VTT, route, ville et BMX, outillage d'atelier et protections. Winsbike distribue en exclusivité en France Weapon Bike, Sumart, Seryt, Crazy Safety et Troxco, et répare cycles et VAE dans son atelier de Rostrenen.</p>
+    <button type="button" class="hero-search" data-open-search><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg><span>Rechercher : plaquette 91, disque 180, casque enfant…</span><kbd class="mono" aria-hidden="true">/</kbd></button>
     <div class="hero-ctas">
       <a class="btn" href="#pratiques" data-magnetic>Trouver ma pièce <svg class="arr" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
       <a class="btn btn-ghost" href="#pro" data-magnetic>Espace pro</a>
@@ -108,9 +120,22 @@
   <div class="wrap">
     <div class="sec-hd split">
       <div><p class="mono eyebrow">Par pratique</p><h2 class="h2" id="prat-t" data-split>Votre vélo, vos pièces.</h2></div>
-      <p class="lead">Six rayons et 70 rubriques au menu du site, de la cassette au jeu de direction. Choisissez votre pratique.</p>
+      <p class="lead">Six univers et 70 rubriques, de la cassette au jeu de direction. Choisissez votre pratique, on vous montre les pièces qui vont avec.</p>
     </div>
     <div class="prat-grid"></div>
+  </div>
+</section>
+
+<section class="season" id="saison" aria-labelledby="season-t">
+  <div class="season-bg" aria-hidden="true"></div>
+  <div class="wrap season-in">
+    <div class="season-copy">
+      <p class="mono eyebrow" data-season="eyebrow"></p>
+      <h2 class="season-title" id="season-t" data-season="title"></h2>
+      <p class="season-text" data-season="text"></p>
+      <p class="mono season-note">Module saisonnier : titre, texte et produits se changent en une ligne</p>
+    </div>
+    <div class="season-cards" data-season-cards></div>
   </div>
 </section>
 
@@ -155,8 +180,8 @@
         <h2 class="h2" id="prot-t" data-split>Protégé, et ça se voit.</h2>
         <p class="lead">Seryt annonce les premières protections vraiment colorées certifiées EN 1621-1, niveaux 1 et 2. Crazy Safety habille les têtes des enfants, et le casque adulte s'éclaire à l'avant et à l'arrière.</p>
         <div class="normes">
-          <div class="norme"><p class="norme-code">EN 1621-1</p><p>Norme européenne des protections d'articulations contre les chocs (genoux, coudes), niveaux 1 et 2.</p></div>
-          <div class="norme"><p class="norme-code">EN 1078</p><p>Norme européenne des casques pour cyclistes, skateboard et rollers.</p></div>
+          <div class="norme"><p class="norme-code">EN 1621-1</p><p>Norme européenne, issue de la moto, des protections d'articulations contre les chocs (genoux, coudes), en niveaux 1 et 2. Indiquée sur les fiches Seryt.</p></div>
+          <div class="norme"><p class="norme-code">EN 1078</p><p>Norme européenne des casques pour cyclistes, skateboard et rollers. Indiquée sur la fiche du casque adulte Crazy Safety.</p></div>
         </div>
       </div>
       <div class="protect-visual">

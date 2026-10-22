@@ -3,13 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sumart chez Winsbike</title>
+<title>Sumart · outillage vélo, distributeur exclusif France · Winsbike</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Sumart, outillage et accessoires de cyclisme, distribué en exclusivité en France par Winsbike : catalogue filtrable par famille, prix et référence de plaquette.">
 <meta name="theme-color" content="#0E0F11">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l12 7v14l-12 7-12-7V9z' fill='%23FF5A1F'/%3E%3Cpath d='M16 10l5.2 3v6L16 22l-5.2-3v-6z' fill='%230E0F11'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Winsbike">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Sumart · outillage vélo, distributeur exclusif France · Winsbike">
+<meta property="og:description" content="Sumart, outillage et accessoires de cyclisme, distribué en exclusivité en France par Winsbike : catalogue filtrable par famille, prix et référence de plaquette.">
+<meta property="og:image" content="assets/img/grok/sumart-outillage-16x9-1536.webp">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil"}, {"@type": "ListItem", "position": 2, "name": "Marques"}, {"@type": "ListItem", "position": 3, "name": "Sumart"}]}</script>
 <script>(function(){var d=document.documentElement;d.classList.add('js');try{var c=localStorage.getItem('wb:calm'),r=matchMedia('(prefers-reduced-motion: reduce)').matches;if(sessionStorage.getItem('wb:nav'))d.classList.add('nav-in');if(sessionStorage.getItem('wb:intro')||c==='true'||(r&&c!=='false'))d.classList.add('no-intro')}catch(e){d.classList.add('no-intro')}})()</script>
 <link rel="preload" href="assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
@@ -17,8 +26,8 @@
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="hd" id="hd">
   <div class="wrap hd-in">
-    <a class="logo" href="index.html" aria-label="Winsbike, accueil"><img src="assets/img/site/logo-clair-700.webp" alt="Winsbike, spécialiste des accessoires de vélo" width="700" height="263"></a>
-    <nav class="hd-nav" aria-label="Navigation principale"><a href="index.html#pratiques">Pratiques</a><a href="index.html#marques">Marques</a><a href="sumart.html" aria-current="page">Sumart</a><a href="cadre-beast-weapon.html">Cadre Beast</a><a href="index.html#atelier">Atelier</a><a href="index.html#pro">Espace pro</a></nav>
+    <a class="logo" href="index.html" aria-label="Winsbike, accueil"><img src="assets/img/site/logo-clair-700.webp" alt="Winsbike, spécialiste des accessoires de vélo" width="700" height="263" fetchpriority="high"></a>
+    <nav class="hd-nav" aria-label="Navigation principale"><button type="button" class="nav-mega" aria-expanded="false" aria-controls="mega">Pratiques <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><a href="index.html#marques">Marques</a><a href="sumart.html" aria-current="page">Sumart</a><a href="cadre-beast-weapon.html">Cadre Beast</a><a href="index.html#atelier">Atelier</a><a href="index.html#pro">Espace pro</a></nav>
     <div class="hd-tools">
       <span class="hd-open mono" data-open-chip></span>
       <button type="button" class="tool" id="btn-search" aria-label="Rechercher" data-cursor="Chercher"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></button>
@@ -28,6 +37,8 @@
       <button type="button" class="burger" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
     </div>
   </div>
+  <div class="mega" id="mega" hidden></div>
+  <i class="hd-progress" aria-hidden="true"></i>
 </header>
 <main id="main">
 <section class="br-hero" aria-labelledby="br-t">
@@ -37,7 +48,7 @@
     <div class="br-head">
       <div class="br-copy">
         <p class="mono eyebrow">Distributeur exclusif France</p>
-        <h1 class="br-title" id="br-t"><span class="sr">Sumart</span><span class="br-word" aria-hidden="true">Sumart</span></h1>
+        <h1 class="br-title" id="br-t"><span class="br-word">Sumart</span></h1>
         <p class="lead">« Une nouvelle génération d'outils » : c'est ainsi que Sumart se présente. La marque conçoit des outils de réparation et d'entretien, du freinage et des accessoires pour les cyclistes. Winsbike la distribue en exclusivité en France.</p>
         <dl class="br-stats">
           <div><dt class="mono">Références</dt><dd data-n="57">57</dd></div>
@@ -63,7 +74,8 @@
     </div>
     <div class="cat-bar" role="search">
       <div class="chips" role="radiogroup" aria-label="Famille"></div>
-      <div class="cat-tools">
+      <button type="button" class="cat-toggle mono" aria-expanded="false" aria-controls="cat-tools">Rechercher, trier, prix max</button>
+      <div class="cat-tools" id="cat-tools">
         <label class="sr" for="cat-q">Rechercher dans Sumart</label><input id="cat-q" type="search" placeholder="Rechercher : pompe, clé, disque…" autocomplete="off">
         <label class="sr" for="cat-sort">Trier</label>
         <select id="cat-sort"><option value="rank">Meilleures ventes</option><option value="asc">Prix croissant</option><option value="desc">Prix décroissant</option><option value="name">Nom A à Z</option></select>
